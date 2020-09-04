@@ -5,7 +5,7 @@ Este programa sirve para descargar el código fuente de la versión más recient
 ## Detalles adicionales
 Este instalador modifica el archivo /etc/security/limits.conf y descarga el ícono desde los repositorios de Quirinux. 
 ### Compatibilidad
-Desarrollado para Quirinux Pro GNU/Linux, Versión 2.0 - 64 bits. Probado con éxito en Debian Buster, Ubuntu 10.04, Linux Mint LMDE4 y Devuan Beowulf.
+Desarrollado para Quirinux GNU/Linux 2.0. Probado con éxito en Debian Buster, Devuan Beowulf, Quirinux 2.0, Etertics, Mint LMDE4 y Ubuntu 20.04. 
 ### Instrucciones
 sudo chmod 755 instalar-opentoonz.sh </br>
 sudo ./instalar-opentoonz.sh

@@ -1,8 +1,7 @@
 # !/bin/bash
 # instalar-opentoonz.sh
 
-# Script para compilar e instalar la versión más reciente de OpenToonz.
-# Desarrollado para Quirinux 2.0.
+# Script para compilar e instalar la versión más reciente de OpenToonz
 # Compatible con Debian Buster, Devuan Beowulf y Ubuntu 10.04. 
 
 # Licencia GPLv3, Autor de este instalador: Charlie Martínez®
@@ -10,6 +9,12 @@
 clear
 
 echo "
+  ___                 _____                     
+ / _ \ _ __   ___ _ _|_   _|__   ___  _ __  ____
+| | | | '_ \ / _ \ '_ \| |/ _ \ / _ \| '_ \|_  /
+| |_| | |_) |  __/ | | | | (_) | (_) | | | |/ / 
+ \___/| .__/ \___|_| |_|_|\___/ \___/|_| |_/___|
+      |_|
 --------------------------------------------------------------
 QUIRINUX PRO: COMPILAR E INSTALAR OPENTOONZ
 --------------------------------------------------------------
@@ -17,12 +22,6 @@ QUIRINUX PRO: COMPILAR E INSTALAR OPENTOONZ
 Descargar código fuente e instalar compilando desde el código
 la versión más nueva del programa de animación profesional 
 OpenToonz con el que puedes reemplazar a Toon Boom Harmony.
-
-
-
-
-
-
 
 
 1 Descargar, compilar e instalar OpenToonz

@@ -1,10 +1,11 @@
-# !/bin/bash
-# instalar-opentoonz.sh
 
-# Script para compilar e instalar la versión más reciente de OpenToonz
-# Compatible con Debian Buster, Devuan Beowulf y Ubuntu 10.04. 
+#!/bin/bash
 
-# Licencia GPLv3, Autor de este instalador: Charlie Martínez®
+# Nombre:       instalar-opentoonz.sh
+# Autor:	      Charlie Martínez® <cmartinez@quirinux.org>
+# Licencia:	    https://www.gnu.org/licenses/gpl-3.0.txt
+# Descripción:  Descarga el código fuente de OpenToonz, lo compila y lo instala.
+# Versión:	    1.00
 
 clear
 

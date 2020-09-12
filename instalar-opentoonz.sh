@@ -122,12 +122,12 @@ clear
 clear
 
 echo "--------------------------------------------------------------
-INSTALLATION FINISHED SUCCESSFUL
+INSTALACIÓN FINALIZADA CON ÉXITO
 --------------------------------------------------------------
  
-Congratulations! OpenToonz is already on your system and you can
-open it by going to ${bold}Applications> Graphics> OpenToonz${normal} or from
-the terminal with the command ${bold}opentoonz.${normal}
+¡Felicidades! OpenToonz ya está en tu sistema y puedes
+abrirlo yendo a ${bold}Aplicaciones > Gráficos > OpenToonz${normal} o desde 
+la terminal con el comando ${bold}opentoonz${normal}
 
 
 "

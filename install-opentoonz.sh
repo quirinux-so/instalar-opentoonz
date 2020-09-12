@@ -81,6 +81,7 @@ sudo apt-get autoremove --purge -y
 # Download and copy the start menu icon
 
 sudo wget  --no-check-certificate 'http://my.opendesktop.org/s/FZz85jagrQLCjjB/download' -O /opt/opentoonz/opentoonz-icon.tar
+sudo rm /opt/opentoonz/opentoonz
 sudo tar -xf /opt/opentoonz/opentoonz-icon.tar -C /
 
 # Creating start command

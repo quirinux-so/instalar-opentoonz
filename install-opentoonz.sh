@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# File:     install-opentoonz.sh
-# Author:   Charlie Martínez® <cmartinez@quirinux.org>
-# License:    https://www.gnu.org/licenses/gpl-3.0.txt
-# Description:    Download OpenToonz source code, compile and install it.
-# Version:    1.00
+# Nombre:	install-opentoonz.sh
+# Autor:	Charlie Martínez® <cmartinez@quirinux.org>
+# Licencia:	https://www.gnu.org/licenses/gpl-3.0.txt
+# Descripción:	Download the source code for the newest version of OpenToonz, compile it, and install it.
+# Versión:	1.00
 
 clear
 

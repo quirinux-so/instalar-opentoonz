@@ -117,9 +117,6 @@ sudo chmod -R 4755 /usr/local/bin/opentoonz
 
 fi
 
-
-clear
-
 clear
 
 echo "--------------------------------------------------------------

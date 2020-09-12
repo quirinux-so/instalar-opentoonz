@@ -4,7 +4,7 @@
 # Autor:	Charlie Martínez® <cmartinez@quirinux.org>
 # Licencia:	https://www.gnu.org/licenses/gpl-3.0.txt
 # Descripción:	Descarga el código fuente de la versión más nueva de OpenToonz, lo compila y lo instala. 
-# Versión:	1.00
+# Versión:	1.1
 
 bold=$(tput bold)
 normal=$(tput sgr0)
@@ -27,6 +27,7 @@ Descargar código fuente e instalar compilando desde el código
 la versión más nueva del programa de animación profesional 
 OpenToonz con el que puedes reemplazar a Toon Boom Harmony.
 
+Compatible con Debian Buster, Devuan Beowulf y Ubuntu 20.4
 
 1 Descargar, compilar e instalar OpenToonz
 0 Salir

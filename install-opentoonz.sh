@@ -22,6 +22,8 @@ Download source code and install by compiling from code
 the newest version of the professional animation program
 OpenToonz with which you can replace Toon Boom Harmony.
 
+Compatible with Debian Buster, Devuan Beowulf and Ubuntu 20.4
+
 1 Download, compile and install OpenToonz
 0 Leave
 

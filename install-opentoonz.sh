@@ -110,7 +110,7 @@ fi
 
 # Delete temporary files
 
-sudo rm -rf /opt/tmp
+sudo rm -rf /opt/tmp/*
 
 clear
 

@@ -93,6 +93,7 @@ sudo apt-get autoremove --purge -y
 # Descarga y copia en ícono del menú de inicio
 
 sudo wget  --no-check-certificate 'http://my.opendesktop.org/s/FZz85jagrQLCjjB/download' -O /opt/opentoonz/opentoonz-icon.tar
+sudo rm /opt/opentoonz/opentoonz
 sudo tar -xf /opt/opentoonz/opentoonz-icon.tar -C /
 
 # Creando comando de inicio

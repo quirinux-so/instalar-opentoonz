@@ -106,7 +106,7 @@ fi
 clear
 
 echo "--------------------------------------------------------------
-INSTALACIÓN FINALIZADA CON ÉXITO
+INSTALLATION FINISHED SUCCESSFUL
 --------------------------------------------------------------
  
 Congratulations! OpenToonz is already on your system and you can

@@ -124,6 +124,8 @@ the terminal with the command ${bold}opentoonz. ${normal}
 
 "
 
+exit 0
+
 ;;
 
 "0")

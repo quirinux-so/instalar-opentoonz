@@ -4,7 +4,7 @@
 # Autor:	Charlie Martínez® <cmartinez@quirinux.org>
 # Licencia:	https://www.gnu.org/licenses/gpl-3.0.txt
 # Descripción:	Download the source code for the newest version of OpenToonz, compile it, and install it.
-# Versión:	1.00
+# Versión:	1.1
 
 clear
 

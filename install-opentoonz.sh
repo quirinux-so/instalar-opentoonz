@@ -81,6 +81,40 @@ sudo apt-get autoremove --purge -y
 sudo wget  --no-check-certificate 'http://my.opendesktop.org/s/FZz85jagrQLCjjB/download' -O /opt/opentoonz/opentoonz-icon.tar
 sudo tar -xf /opt/opentoonz/opentoonz-icon.tar -C /
 
+# Creating start command
+
+sudo chmod -R 775 /opt/opentoonz
+sudo chown -R $USER /opt/opentoonz
+
+FILE="/usr/local/bin/imagine2"
+
+if [ -f "$FILE" ]; then
+
+sudo rm /usr/local/bin/opentoonz
+cd /usr/local/bin
+sudo ln -s /opt/opentoonz/bin/opentoonz
+sudo chmod -R 4755 /usr/local/bin/opentoonz
+
+else
+
+cd /usr/local/bin
+sudo ln -s /opt/opentoonz/bin/opentoonz
+sudo chmod -R 4755 /usr/local/bin/opentoonz
+
+fi
+
+clear
+
+echo "--------------------------------------------------------------
+INSTALACIÓN FINALIZADA CON ÉXITO
+--------------------------------------------------------------
+ 
+Congratulations! OpenToonz is already on your system and you can
+open it by going to ${bold}Applications> Graphics> OpenToonz ${normal}or fro
+the terminal with the command ${bold}opentoonz. ${normal}
+
+"
+
 ;;
 
 "0")

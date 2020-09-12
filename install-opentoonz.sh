@@ -93,12 +93,14 @@ FILE="/usr/local/bin/imagine2"
 if [ -f "$FILE" ]; then
 
 sudo rm /usr/local/bin/opentoonz
+sudo mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/run-opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/bin/opentoonz
 sudo chmod -R 4755 /usr/local/bin/opentoonz
 
 else
 
+sudo mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/run-opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/bin/opentoonz
 sudo chmod -R 4755 /usr/local/bin/opentoonz

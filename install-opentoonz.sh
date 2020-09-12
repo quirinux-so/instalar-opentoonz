@@ -108,6 +108,10 @@ sudo chmod -R 4755 /usr/local/bin/opentoonz
 
 fi
 
+# Delete temporary files
+
+sudo rm -rf /opt/tmp
+
 clear
 
 echo "--------------------------------------------------------------

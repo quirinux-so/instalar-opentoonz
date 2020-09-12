@@ -8,16 +8,16 @@
 
 clear
 
-echo "
+echo "--------------------------------------------------------------
+QUIRINUX PRO: COMPILE AND INSTALL OPENTOONZ
+--------------------------------------------------------------
   ___                 _____                     
  / _ \ _ __   ___ _ _|_   _|__   ___  _ __  ____
 | | | | '_ \ / _ \ '_ \| |/ _ \ / _ \| '_ \|_  /
 | |_| | |_) |  __/ | | | | (_) | (_) | | | |/ / 
  \___/| .__/ \___|_| |_|_|\___/ \___/|_| |_/___|
       |_|
---------------------------------------------------------------
-QUIRINUX PRO: COMPILE AND INSTALL OPENTOONZ
---------------------------------------------------------------
+
 Download source code and install by compiling from code
 the newest version of the professional animation program
 OpenToonz with which you can replace Toon Boom Harmony.

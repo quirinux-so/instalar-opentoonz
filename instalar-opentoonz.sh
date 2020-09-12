@@ -137,9 +137,13 @@ la terminal con el comando ${bold}opentoonz${normal}
 
 "
 
+exit 0
+
 ;;
 
 "0")
+
+clear
 
 exit 0
 

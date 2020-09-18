@@ -89,7 +89,7 @@ sudo tar -xf /opt/opentoonz/opentoonz-icon.tar -C /
 sudo chmod -R 775 /opt/opentoonz
 sudo chown -R $USER /opt/opentoonz
 
-FILE="/usr/local/bin/imagine2"
+FILE="/usr/local/bin/opentoonz"
 
 if [ -f "$FILE" ]; then
 

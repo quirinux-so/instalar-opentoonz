@@ -93,7 +93,6 @@ sudo apt-get autoremove --purge -y
 # Descarga y copia en ícono del menú de inicio
 
 sudo wget  --no-check-certificate 'http://my.opendesktop.org/s/FZz85jagrQLCjjB/download' -O /opt/opentoonz/opentoonz-icon.tar
-sudo rm /opt/opentoonz/bin/opentoonz
 sudo tar -xf /opt/opentoonz/opentoonz-icon.tar -C /
 
 # Creando comando de inicio
@@ -101,19 +100,17 @@ sudo tar -xf /opt/opentoonz/opentoonz-icon.tar -C /
 sudo chmod -R 775 /opt/opentoonz
 sudo chown -R $USER /opt/opentoonz
 
-FILE="/usr/local/bin/imagine2"
+FILE="/usr/local/bin/opentoonz"
 
 if [ -f "$FILE" ]; then
 
 sudo rm /usr/local/bin/opentoonz
-sudo mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/run-opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/bin/opentoonz
 sudo chmod -R 4755 /usr/local/bin/opentoonz
 
 else
 
-sudo mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/run-opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/bin/opentoonz
 sudo chmod -R 4755 /usr/local/bin/opentoonz

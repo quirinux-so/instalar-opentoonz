@@ -96,13 +96,13 @@ if [ -f "$FILE" ]; then
 sudo rm /usr/local/bin/opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/bin/opentoonz
-sudo chmod -R 4755 /usr/local/bin/opentoonz
+sudo chmod 777 /usr/local/bin/opentoonz
 
 else
 
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/bin/opentoonz
-sudo chmod -R 4755 /usr/local/bin/opentoonz
+sudo chmod 777 /usr/local/bin/opentoonz
 
 fi
 

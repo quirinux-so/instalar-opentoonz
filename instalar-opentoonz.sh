@@ -124,6 +124,7 @@ fi
 # Borrar archivos temporales
 
 sudo rm -rf /opt/tmp/*
+sudo rm /opt/opentoonz/opentoonz-icon.tar
 
 clear
 

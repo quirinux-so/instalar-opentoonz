@@ -90,12 +90,14 @@ sudo make install
 sudo apt-get install -f -y
 sudo apt-get autoremove --purge -y
 
-# Descarga y copia en ícono del menú de inicio
+# Descarga y copia en ícono del menú de inicio de OpenToonz
 
-sudo wget  --no-check-certificate 'http://my.opendesktop.org/s/FZz85jagrQLCjjB/download' -O /opt/opentoonz/opentoonz-icon.tar
-sudo tar -xf /opt/opentoonz/opentoonz-icon.tar -C /
+sudo mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/opentoonz2
+sudo wget  --no-check-certificate 'http://my.opendesktop.org/s/FZz85jagrQLCjjB/download' -O /opt/tmp/opentoonz/opentoonz-icon.tar
+sudo mv /opt/tmp/opentoonz /opt/tmp/opentoonz-tmp
+sudo tar -xvf /opt/tmp/opentoonz-tmp/opentoonz-icon.tar -C /
 
-# Creando comando de inicio
+# Creando comando de inicio de OpenToonz
 
 sudo chmod -R 775 /opt/opentoonz
 sudo chown -R $USER /opt/opentoonz
@@ -105,7 +107,6 @@ FILE="/usr/local/bin/opentoonz"
 if [ -f "$FILE" ]; then
 
 sudo rm /usr/local/bin/opentoonz
-mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/opentoonz2
 mv /opt/tmp/opentoonz /opt/opentoonz/bin/opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/bin/opentoonz
@@ -113,7 +114,6 @@ sudo chmod 777 /usr/local/bin/opentoonz
 
 else
 
-mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/opentoonz2
 mv /opt/tmp/opentoonz /opt/opentoonz/bin/opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/bin/opentoonz

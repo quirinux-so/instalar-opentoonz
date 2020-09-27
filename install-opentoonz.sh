@@ -17,16 +17,12 @@ QUIRINUX PRO: COMPILE AND INSTALL OPENTOONZ
 | |_| | |_) |  __/ | | | | (_) | (_) | | | |/ / 
  \___/| .__/ \___|_| |_|_|\___/ \___/|_| |_/___|
       |_|
-
 Download source code and install by compiling from code
 the newest version of the professional animation program
 OpenToonz with which you can replace Toon Boom Harmony.
-
 Compatible with Debian Buster, Devuan Beowulf and Ubuntu 20.4
-
 1 Download, compile and install OpenToonz
 0 Leave
-
 "
 
 read -p " Your answer-> " opc 
@@ -42,14 +38,18 @@ for paquetes_wget in wget git software-properties-common; do sudo apt-get instal
 sudo apt-get install -f -y
 sudo apt-get autoremove --purge -y
 
-# Compile OpenToonz from source code
+# Install OpenToonz dependencies
 
 sudo apt-get update -y
 for paquetes_opentoonz in build-essential git cmake pkg-config libboost-all-dev qt5-default qtbase5-dev libqt5svg5-dev qtscript5-dev qttools5-dev qttools5-dev-tools libqt5opengl5-dev qtmultimedia5-dev libsuperlu-dev liblz4-dev libusb-1.0-0-dev liblzo2-dev libpng-dev libjpeg-dev libglew-dev freeglut3-dev libfreetype6-dev libjson-c-dev qtwayland5 libqt5multimedia5-plugins; do sudo apt-get install -y $paquetes_opentoonz; done
 for paquetes_opentoonz2 in libmypaint-dev; do sudo apt-get install -y $paquetes_opentoonz2; done
-mkdir /opt/tmp
-cd /opt/tmp
-git clone https://github.com/opentoonz/opentoonz
+
+# Compile OpenToonz from source code
+
+mkdir -p /opt/tmp/opentoonz
+sudo wget  --no-check-certificate 'https://github.com/opentoonz/opentoonz/archive/v1.4.0.tar.gz' -O /opt/tmp/opentoonz/opentoonz-1.4.0.tar.gz
+tar -xzvf /opt/tmp/opentoonz/opentoonz-1.4.0.tar.gz -C /opt/tmp/
+cd /opt/tmp/opentoonz-1.4.0
 mkdir -p $HOME/.config/OpenToonz
 cp -r opentoonz/stuff $HOME/.config/OpenToonz/
 cat << EOF > $HOME/.config/OpenToonz/SystemVar.ini
@@ -65,11 +65,11 @@ TOONZPROJECTS="$HOME/.config/OpenToonz/stuff/projects"
 TOONZROOT="$HOME/.config/OpenToonz/stuff"
 TOONZSTUDIOPALETTE="$HOME/.config/OpenToonz/stuff/studiopalette"
 EOF
-cd /opt/tmp/opentoonz/thirdparty/tiff-4.0.3
+cd /opt/tmp/opentoonz-1.4.0/thirdparty/tiff-4.0.3
 ./configure --with-pic --disable-jbig
 make -j$(nproc)
 cd ../../
-cd /opt/tmp/opentoonz/toonz
+cd /opt/tmp/opentoonz-1.4.0/toonz
 mkdir build
 cd build
 cmake ../sources
@@ -112,7 +112,6 @@ fi
 # Delete temporary files
 
 sudo rm -rf /opt/tmp/*
-sudo rm /opt/opentoonz/opentoonz-icon.tar
 
 clear
 
@@ -123,7 +122,6 @@ INSTALLATION FINISHED SUCCESSFUL
 Congratulations! OpenToonz is already on your system and you can
 open it by going to ${bold}Applications> Graphics> OpenToonz ${normal}or fro
 the terminal with the command ${bold}opentoonz. ${normal}
-
 "
 
 exit 0

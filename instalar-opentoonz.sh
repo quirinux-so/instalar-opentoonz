@@ -44,7 +44,7 @@ case $opc in
 
 clear
 
-# Instala dependencias del instalador
+# Instala dependencias del instalador de OpenToonz
 
 sudo apt-get update -y
 for paquetes_wget in wget git software-properties-common; do sudo apt-get install -y $paquetes_wget; done
@@ -59,9 +59,10 @@ for paquetes_opentoonz2 in libmypaint-dev; do sudo apt-get install -y $paquetes_
 
 # Descarga y compila el código fuente de OpenToonz
 
-mkdir /opt/tmp
-cd /opt/tmp
-git clone https://github.com/opentoonz/opentoonz
+mkdir -p /opt/tmp/opentoonz
+sudo wget  --no-check-certificate 'https://github.com/opentoonz/opentoonz/archive/v1.4.0.tar.gz' -O /opt/tmp/opentoonz/opentoonz-1.4.0.tar.gz
+tar -xzvf /opt/tmp/opentoonz/opentoonz-1.4.0.tar.gz -C /opt/tmp/
+cd /opt/tmp/opentoonz-1.4.0
 mkdir -p $HOME/.config/OpenToonz
 cp -r opentoonz/stuff $HOME/.config/OpenToonz/
 cat << EOF > $HOME/.config/OpenToonz/SystemVar.ini
@@ -77,11 +78,11 @@ TOONZPROJECTS="$HOME/.config/OpenToonz/stuff/projects"
 TOONZROOT="$HOME/.config/OpenToonz/stuff"
 TOONZSTUDIOPALETTE="$HOME/.config/OpenToonz/stuff/studiopalette"
 EOF
-cd /opt/tmp/opentoonz/thirdparty/tiff-4.0.3
+cd /opt/tmp/opentoonz-1.4.0/thirdparty/tiff-4.0.3
 ./configure --with-pic --disable-jbig
 make -j$(nproc)
 cd ../../
-cd /opt/tmp/opentoonz/toonz
+cd /opt/tmp/opentoonz-1.4.0/toonz
 mkdir build
 cd build
 cmake ../sources

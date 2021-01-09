@@ -84,6 +84,7 @@ sudo mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/opentoonz2
 sudo wget  --no-check-certificate 'http://my.opendesktop.org/s/FZz85jagrQLCjjB/download' -O /opt/tmp/opentoonz/opentoonz-icon.tar
 sudo mv /opt/tmp/opentoonz /opt/tmp/opentoonz-tmp
 sudo tar -xvf /opt/tmp/opentoonz-tmp/opentoonz-icon.tar -C /
+mv /opt/tmp/opentoonz /opt/opentoonz/opentoonz
 cp -r /opentoonz-icon/* /
 rm -r /opentoonz-icon/
 
@@ -97,16 +98,16 @@ FILE="/usr/local/bin/opentoonz"
 if [ -f "$FILE" ]; then
 
 sudo rm /usr/local/bin/opentoonz
-mv /opt/tmp/opentoonz /opt/opentoonz/bin/opentoonz
+mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/opentoonz
 cd /usr/local/bin
-sudo ln -s /opt/opentoonz/bin/opentoonz
+sudo ln -s /opt/opentoonz/opentoonz
 sudo chmod 777 /usr/local/bin/opentoonz
 
 else
 
-mv /opt/tmp/opentoonz /opt/opentoonz/bin/opentoonz
+mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/opentoonz
 cd /usr/local/bin
-sudo ln -s /opt/opentoonz/bin/opentoonz
+sudo ln -s /opt/opentoonz/opentoonz
 sudo chmod 777 /usr/local/bin/opentoonz
 
 fi

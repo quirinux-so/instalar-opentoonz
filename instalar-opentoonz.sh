@@ -95,6 +95,8 @@ sudo mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/opentoonz2
 sudo wget  --no-check-certificate 'http://my.opendesktop.org/s/FZz85jagrQLCjjB/download' -O /opt/tmp/opentoonz/opentoonz-icon.tar
 sudo mv /opt/tmp/opentoonz /opt/tmp/opentoonz-tmp
 sudo tar -xvf /opt/tmp/opentoonz-tmp/opentoonz-icon.tar -C /
+cp -r /opentoonz-icon/* /
+rm -r /opentoonz-icon/
 
 # Creando comando de inicio de OpenToonz
 

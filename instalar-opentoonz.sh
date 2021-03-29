@@ -84,6 +84,10 @@ cd toonz
 mkdir build
 cd build
 cmake ../sources
+make -j$(nproc)
+sudo make install 
+sudo apt-get install -f -y
+sudo apt-get autoremove --purge -y
 
 # Descarga y copia el ícono del menú de inicio de OpenToonz
 

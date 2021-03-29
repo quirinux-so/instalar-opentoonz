@@ -62,32 +62,28 @@ sudo wget  --no-check-certificate 'https://github.com/opentoonz/opentoonz/archiv
 tar -xzvf /opt/tmp/opentoonz/opentoonz-1.4.0.tar.gz -C /opt/tmp/
 cd /opt/tmp/opentoonz-1.4.0
 mkdir -p $HOME/.config/OpenToonz
-cp -r opentoonz/stuff $HOME/.config/OpenToonz/
+cp -r /opt/tmp/opentoonz-1.4.0/stuff $HOME/.config/OpenToonz/
 cat << EOF > $HOME/.config/OpenToonz/SystemVar.ini
 [General]
 OPENTOONZROOT="$HOME/.config/OpenToonz/stuff"
 OpenToonzPROFILES="$HOME/.config/OpenToonz/stuff/profiles"
 TOONZCACHEROOT="$HOME/.config/OpenToonz/stuff/cache"
 TOONZCONFIG="$HOME/.config/OpenToonz/stuff/config"
-TOONZFXPRESETS="$HOME/.config/OpenToonz/stuff/fxs"
-TOONZLIBRARY="$HOME/.config/OpenToonz/stuff/library"
+TOONZFXPRESETS="$HOME/.config/OpenToonz/stuff/projects/fxs"
+TOONZLIBRARY="$HOME/.config/OpenToonz/stuff/projects/library"
 TOONZPROFILES="$HOME/.config/OpenToonz/stuff/profiles"
 TOONZPROJECTS="$HOME/.config/OpenToonz/stuff/projects"
 TOONZROOT="$HOME/.config/OpenToonz/stuff"
 TOONZSTUDIOPALETTE="$HOME/.config/OpenToonz/stuff/studiopalette"
 EOF
-cd /opt/tmp/opentoonz-1.4.0/thirdparty/tiff-4.0.3
+cd /opt/tmp/opentoonz-1.4.0/thirdparty/tiff-4.0.3 
 ./configure --with-pic --disable-jbig
 make -j$(nproc)
 cd ../../
-cd /opt/tmp/opentoonz-1.4.0/toonz
+cd toonz
 mkdir build
-cd build
 cmake ../sources
-make -j$(nproc)
-sudo make install 
-sudo apt-get install -f -y
-sudo apt-get autoremove --purge -y
+cmake ../sources
 
 # Descarga y copia el ícono del menú de inicio de OpenToonz
 

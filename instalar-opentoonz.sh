@@ -82,7 +82,7 @@ make -j$(nproc)
 cd ../../
 cd toonz
 mkdir build
-cmake ../sources
+cd build
 cmake ../sources
 
 # Descarga y copia el ícono del menú de inicio de OpenToonz

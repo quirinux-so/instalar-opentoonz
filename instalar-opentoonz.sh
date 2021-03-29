@@ -106,17 +106,23 @@ sudo chown -R $USER /opt/opentoonz
 
 FILE="/usr/local/bin/opentoonz"
 
+FILE="/usr/local/bin/opentoonz"
+
 if [ -f "$FILE" ]; then
 
 sudo rm /usr/local/bin/opentoonz
-mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/opentoonz
+mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/
+touch /opt/opentoonz/opentoonz
+echo "/opt/opentoonz/bin/./opentoonz2" > /opt/opentoonz/opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/opentoonz
 sudo chmod 777 /usr/local/bin/opentoonz
 
 else
 
-mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/opentoonz
+mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/
+touch /opt/opentoonz/opentoonz
+echo "/opt/opentoonz/bin/./opentoonz2" > /opt/opentoonz/opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/opentoonz
 sudo chmod 777 /usr/local/bin/opentoonz
@@ -127,6 +133,9 @@ fi
 
 sudo rm -rf /opt/tmp/*
 sudo rm /opt/opentoonz/opentoonz-icon.tar
+sudo rm /opt/opentoonz/bin/opentoonz-1.4.0.tar.gz
+
+clear
 
 clear
 
@@ -201,19 +210,29 @@ FILE="/usr/local/bin/opentoonz"
 if [ -f "$FILE" ]; then
 
 sudo rm /usr/local/bin/opentoonz
-mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/opentoonz
+mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/
+touch /opt/opentoonz/opentoonz
+echo "/opt/opentoonz/bin/./opentoonz2" > /opt/opentoonz/opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/opentoonz
 sudo chmod 777 /usr/local/bin/opentoonz
 
 else
 
-mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/opentoonz
+mv /opt/tmp/opentoonz-tmp/* /opt/opentoonz/bin/
+touch /opt/opentoonz/opentoonz
+echo "/opt/opentoonz/bin/./opentoonz2" > /opt/opentoonz/opentoonz
 cd /usr/local/bin
 sudo ln -s /opt/opentoonz/opentoonz
 sudo chmod 777 /usr/local/bin/opentoonz
 
 fi
+
+# Borrar archivos temporales
+
+sudo rm -rf /opt/tmp/*
+sudo rm /opt/opentoonz/opentoonz-icon.tar
+sudo rm /opt/opentoonz/bin/opentoonz-1.4.0.tar.gz
 
 clear
 

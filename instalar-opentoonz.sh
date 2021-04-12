@@ -28,7 +28,7 @@ OpenToonz con el que puedes reemplazar a Toon Boom Harmony.
 Compatible con Debian Buster, Devuan Beowulf y Ubuntu 20.4
 
 
-1 Descargar, compilar e instalar OpenToonz 1.4 (estable)
+1 Descargar, compilar e instalar OpenToonz 1.5.0 (estable)
 2 Descargar, compilar e instalar OpenToonz nightly build (testing)
 0 Salir
 
@@ -58,11 +58,11 @@ for paquetes_opentoonz2 in libmypaint-dev; do sudo apt-get install -y $paquetes_
 # Descarga y compila el código fuente de OpenToonz
 
 mkdir -p /opt/tmp/opentoonz
-sudo wget  --no-check-certificate 'https://github.com/opentoonz/opentoonz/archive/v1.4.0.tar.gz' -O /opt/tmp/opentoonz/opentoonz-1.4.0.tar.gz
-tar -xzvf /opt/tmp/opentoonz/opentoonz-1.4.0.tar.gz -C /opt/tmp/
-cd /opt/tmp/opentoonz-1.4.0
+sudo wget  --no-check-certificate 'https://github.com/opentoonz/opentoonz/archive/refs/tags/v1.5.0.tar.gz' -O /opt/tmp/opentoonz/opentoonz-1.5.0.tar.gz
+tar -xzvf /opt/tmp/opentoonz/opentoonz-1.5.0.tar.gz -C /opt/tmp/
+cd /opt/tmp/opentoonz-1.5.0
 mkdir -p $HOME/.config/OpenToonz
-cp -r /opt/tmp/opentoonz-1.4.0/stuff $HOME/.config/OpenToonz/
+cp -r /opt/tmp/opentoonz-1.5.0/stuff $HOME/.config/OpenToonz/
 cat << EOF > $HOME/.config/OpenToonz/SystemVar.ini
 [General]
 OPENTOONZROOT="$HOME/.config/OpenToonz/stuff"
@@ -76,7 +76,7 @@ TOONZPROJECTS="$HOME/.config/OpenToonz/stuff/projects"
 TOONZROOT="$HOME/.config/OpenToonz/stuff"
 TOONZSTUDIOPALETTE="$HOME/.config/OpenToonz/stuff/studiopalette"
 EOF
-cd /opt/tmp/opentoonz-1.4.0/thirdparty/tiff-4.0.3 
+cd /opt/tmp/opentoonz-1.5.0/thirdparty/tiff-4.0.3 
 ./configure --with-pic --disable-jbig
 make -j$(nproc)
 cd ../../

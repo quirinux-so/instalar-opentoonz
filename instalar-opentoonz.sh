@@ -143,7 +143,7 @@ echo "--------------------------------------------------------------
 INSTALACIÓN FINALIZADA CON ÉXITO
 --------------------------------------------------------------
  
-¡Felicidades! OpenToonz Estable 1.4 ya está en tu sistema y puedes
+¡Felicidades! OpenToonz Estable 1.5.0 ya está en tu sistema y puedes
 abrirlo yendo a ${bold}Aplicaciones > Gráficos > OpenToonz${normal} o desde 
 la terminal con el comando ${bold}opentoonz${normal}
 "

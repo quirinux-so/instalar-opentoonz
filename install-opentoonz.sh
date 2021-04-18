@@ -21,7 +21,7 @@ Download source code and install by compiling from code
 the newest version of the professional animation program
 OpenToonz with which you can replace Toon Boom Harmony.
 Compatible with Debian Buster, Devuan Beowulf and Ubuntu 20.4
-1 Download, compile and install OpenToonz
+1 Download, compile and install OpenToonz 1.5
 0 Leave
 "
 
@@ -31,52 +31,29 @@ case $opc in
 
 "1") 
 
-# Install installer dependencies.
+# Compile OpenToonz 1.5 from source code
 
 sudo apt-get update -y
-for paquetes_wget in wget git software-properties-common; do sudo apt-get install -y $paquetes_wget; done
-sudo apt-get install -f -y
-sudo apt-get autoremove --purge -y
-
-# Install OpenToonz dependencies
-
-sudo apt-get update -y
-for paquetes_opentoonz in build-essential git cmake pkg-config libboost-all-dev qt5-default qtbase5-dev libqt5svg5-dev qtscript5-dev qttools5-dev qttools5-dev-tools libqt5opengl5-dev qtmultimedia5-dev libsuperlu-dev liblz4-dev libusb-1.0-0-dev liblzo2-dev libpng-dev libjpeg-dev libglew-dev freeglut3-dev libfreetype6-dev libjson-c-dev qtwayland5 libqt5multimedia5-plugins; do sudo apt-get install -y $paquetes_opentoonz; done
-for paquetes_opentoonz2 in libmypaint-dev; do sudo apt-get install -y $paquetes_opentoonz2; done
-
-# Compile OpenToonz from source code
+for paquetes_opentoonz in wget build-essential git cmake pkg-config libboost-all-dev qt5-default qtbase5-dev libqt5svg5-dev qtscript5-dev qttools5-dev qttools5-dev-tools libqt5opengl5-dev qtmultimedia5-dev libqt5multimedia5-plugins libqt5serialport5-dev libsuperlu-dev liblz4-dev libusb-1.0-0-dev liblzo2-dev libpng-dev libjpeg-dev libglew-dev freeglut3-dev libfreetype6-dev libjson-c-dev qtwayland5 libmypaint-dev libopencv-dev libturbojpeg-dev; do sudo apt-get install -y $paquetes_opentoonz; done
 
 mkdir -p /opt/tmp/opentoonz
-sudo wget  --no-check-certificate 'https://github.com/opentoonz/opentoonz/archive/v1.4.0.tar.gz' -O /opt/tmp/opentoonz/opentoonz-1.4.0.tar.gz
-tar -xzvf /opt/tmp/opentoonz/opentoonz-1.4.0.tar.gz -C /opt/tmp/
-cd /opt/tmp/opentoonz-1.4.0
+sudo wget  --no-check-certificate 'https://github.com/opentoonz/opentoonz/archive/refs/tags/v1.5.0.tar.gz' -O /opt/tmp/opentoonz/opentoonz-1.5.0.tar.gz
+tar -xzvf /opt/tmp/opentoonz/opentoonz-1.5.0.tar.gz -C /opt/tmp/
+cd /opt/tmp/opentoonz-1.5.0
+
 mkdir -p $HOME/.config/OpenToonz
-cp -r opentoonz/stuff $HOME/.config/OpenToonz/
-cat << EOF > $HOME/.config/OpenToonz/SystemVar.ini
-[General]
-OPENTOONZROOT="$HOME/.config/OpenToonz/stuff"
-OpenToonzPROFILES="$HOME/.config/OpenToonz/stuff/profiles"
-TOONZCACHEROOT="$HOME/.config/OpenToonz/stuff/cache"
-TOONZCONFIG="$HOME/.config/OpenToonz/stuff/config"
-TOONZFXPRESETS="$HOME/.config/OpenToonz/stuff/fxs"
-TOONZLIBRARY="$HOME/.config/OpenToonz/stuff/library"
-TOONZPROFILES="$HOME/.config/OpenToonz/stuff/profiles"
-TOONZPROJECTS="$HOME/.config/OpenToonz/stuff/projects"
-TOONZROOT="$HOME/.config/OpenToonz/stuff"
-TOONZSTUDIOPALETTE="$HOME/.config/OpenToonz/stuff/studiopalette"
-EOF
-cd /opt/tmp/opentoonz-1.4.0/thirdparty/tiff-4.0.3
+cp -r /opt/tmp/opentoonz-1.5.0/stuff $HOME/.config/OpenToonz/
+
+cd /opt/tmp/opentoonz-1.5.0/thirdparty/tiff-4.0.3
 ./configure --with-pic --disable-jbig
 make -j$(nproc)
 cd ../../
-cd /opt/tmp/opentoonz-1.4.0/toonz
+
+cd toonz
 mkdir build
 cd build
 cmake ../sources
 make -j$(nproc)
-sudo make install 
-sudo apt-get install -f -y
-sudo apt-get autoremove --purge -y
 
 # Download and copy the start menu icon
 
@@ -118,13 +95,11 @@ sudo chmod 777 /usr/local/bin/opentoonz
 
 fi
 
-# Borrar archivos temporales
+# Delete temp files
 
 sudo rm -rf /opt/tmp/*
 sudo rm /opt/opentoonz/opentoonz-icon.tar
-sudo rm /opt/opentoonz/bin/opentoonz-1.4.0.tar.gz
-
-clear
+sudo rm /opt/opentoonz/bin/opentoonz-1.5.0.tar.gz
 
 clear
 

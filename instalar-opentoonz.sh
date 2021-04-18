@@ -42,7 +42,6 @@ case $opc in
 
 clear
 
-
 sudo apt-get update -y
 for paquetes_opentoonz in wget build-essential git cmake pkg-config libboost-all-dev qt5-default qtbase5-dev libqt5svg5-dev qtscript5-dev qttools5-dev qttools5-dev-tools libqt5opengl5-dev qtmultimedia5-dev libqt5multimedia5-plugins libqt5serialport5-dev libsuperlu-dev liblz4-dev libusb-1.0-0-dev liblzo2-dev libpng-dev libjpeg-dev libglew-dev freeglut3-dev libfreetype6-dev libjson-c-dev qtwayland5 libmypaint-dev libopencv-dev libturbojpeg-dev; do sudo apt-get install -y $paquetes_opentoonz; done
 
@@ -111,7 +110,7 @@ fi
 
 sudo rm -rf /opt/tmp/*
 sudo rm /opt/opentoonz/opentoonz-icon.tar
-sudo rm /opt/opentoonz/bin/opentoonz-1.4.0.tar.gz
+sudo rm /opt/opentoonz/bin/opentoonz-1.5.0.tar.gz
 
 clear
 
@@ -200,7 +199,7 @@ fi
 
 sudo rm -rf /opt/tmp/*
 sudo rm /opt/opentoonz/opentoonz-icon.tar
-sudo rm /opt/opentoonz/bin/opentoonz-1.4.0.tar.gz
+sudo rm /opt/opentoonz/bin/opentoonz-1.5.0.tar.gz
 
 clear
 

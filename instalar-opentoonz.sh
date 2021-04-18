@@ -52,7 +52,6 @@ cd /opt/tmp/opentoonz-1.5.0
 
 mkdir -p $HOME/.config/OpenToonz
 cp -r /opt/tmp/opentoonz-1.5.0/stuff $HOME/.config/OpenToonz/
-cd /opt/tmp/opentoonz-1.5.0/thirdparty/tiff-4.0.3
 
 cd /opt/tmp/opentoonz-1.5.0/thirdparty/tiff-4.0.3
 ./configure --with-pic --disable-jbig
@@ -110,9 +109,7 @@ fi
 
 sudo rm -rf /opt/tmp/*
 sudo rm /opt/opentoonz/opentoonz-icon.tar
-sudo rm /opt/opentoonz/bin/opentoonz-1.5.0.tar.gz
-
-clear
+sudo rm /opt/opentoonz/bin/opentoonz-1.4.0.tar.gz
 
 clear
 
@@ -146,7 +143,7 @@ cd /opt/opentoonz/thirdparty/tiff-4.0.3
 
 cd /opt/tmp/opentoonz/thirdparty/tiff-4.0.3
 ./configure --with-pic --disable-jbig
-cd /opt/tmp/opentoonz/thirdparty/tiff-4.0.3
+cd opentoonz/thirdparty/tiff-4.0.3
 make -j$(nproc)
 cd ../../
 
@@ -155,7 +152,6 @@ mkdir build
 mkdir build
 cmake ../sources
 make -j$(nproc)
-
 
 # Descarga y copia el ícono del menú de inicio de OpenToonz
 
@@ -171,6 +167,8 @@ rm -r /opentoonz-icon/
 
 sudo chmod -R 775 /opt/opentoonz
 sudo chown -R $USER /opt/opentoonz
+
+FILE="/usr/local/bin/opentoonz"
 
 FILE="/usr/local/bin/opentoonz"
 
@@ -199,7 +197,7 @@ fi
 
 sudo rm -rf /opt/tmp/*
 sudo rm /opt/opentoonz/opentoonz-icon.tar
-sudo rm /opt/opentoonz/bin/opentoonz-1.5.0.tar.gz
+sudo rm /opt/opentoonz/bin/opentoonz-1.4.0.tar.gz
 
 clear
 

@@ -57,6 +57,8 @@ make -j$(nproc)
 
 # Download and copy the start menu icon
 
+mkdir -p /opt/opentoonz
+mv /opt/tmp/opentoonz-1.5.0/toonz/build/* /opt/opentoonz/
 sudo mv /opt/opentoonz/bin/opentoonz /opt/opentoonz/bin/opentoonz2
 sudo wget  --no-check-certificate 'http://my.opendesktop.org/s/FZz85jagrQLCjjB/download' -O /opt/tmp/opentoonz/opentoonz-icon.tar
 sudo mv /opt/tmp/opentoonz /opt/tmp/opentoonz-tmp
@@ -69,8 +71,6 @@ rm -r /opentoonz-icon/
 
 sudo chmod -R 775 /opt/opentoonz
 sudo chown -R $USER /opt/opentoonz
-
-FILE="/usr/local/bin/opentoonz"
 
 FILE="/usr/local/bin/opentoonz"
 

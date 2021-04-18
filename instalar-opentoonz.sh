@@ -55,13 +55,12 @@ cp -r /opt/tmp/opentoonz-1.5.0/stuff $HOME/.config/OpenToonz/
 
 cd /opt/tmp/opentoonz-1.5.0/thirdparty/tiff-4.0.3
 ./configure --with-pic --disable-jbig
-cd /opt/tmp/opentoonz-1.5.0/thirdparty/tiff-4.0.3
 make -j$(nproc)
 cd ../../
 
-cd ../../
+cd toonz
 mkdir build
-mkdir build
+cd build
 cmake ../sources
 make -j$(nproc)
 
@@ -147,9 +146,9 @@ cd opentoonz/thirdparty/tiff-4.0.3
 make -j$(nproc)
 cd ../../
 
-cd ../../
+cd toonz
 mkdir build
-mkdir build
+cd build
 cmake ../sources
 make -j$(nproc)
 
